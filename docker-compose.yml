@@ -1,0 +1,37 @@
+﻿version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    ports:
+      - "1466:1433" # 主機的 1466 端口映射到容器的 1433 端口
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "P@55word" # 設置 SQL Server 的密碼
+    networks:
+      - todonet
+  webapi:
+    build:
+      context: ./ToDoListApp
+    container_name: webapi
+    ports:
+      - "5035:8080"
+      - "7112:8081"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ConnectionStrings__DefaultConnection: "Server=172.29.60.101,1466;Database=app;User=sa;Password=P@55word;TrustServerCertificate=True"
+    networks:
+      - todonet
+
+#  test:
+#    build:
+#      context: ./ToDoListTest
+#    container_name: test
+#    depends_on:
+#      - webapi
+#    networks:
+#      - todonet
+
+networks:
+  todonet:

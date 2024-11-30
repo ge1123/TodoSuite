@@ -1,0 +1,141 @@
+# Compiled source
+bin/
+obj/
+out/
+
+# Rider specific
+.idea/
+*.sln.iml
+
+# Visual Studio specific
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code specific
+.vscode/
+.vscode-test/
+
+# User-specific files
+*.ntvs*
+*.njsproj
+*.psess
+
+# Logs
+*.log
+*.tlog
+
+# Debug and Release folders
+[Dd]ebug/
+[Rr]elease/
+[Tt]est[Rr]esult*/
+
+# Build directories
+build/
+BuildOutput/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Resharper and Rider files
+_ReSharper*/
+.idea/
+
+# Rider settings
+.idea_modules/
+.idea/
+.idea/workspace.xml
+.idea/assetWizardSettings.xml
+.idea/markdown_navigator.xml
+.idea/codeStyles/
+.idea/shelf/
+.idea/gradle.xml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+*.testSettings
+*.trx
+coverage.opencover.xml
+
+# Extensions
+.vs/
+.vssettings
+*.userprefs
+
+# JetBrains Rider caches and logs
+.idea/
+.idea_modules/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/shelf/
+.idea/**/logs/
+.idea/**/assetWizardSettings.xml
+.idea/codeStyles/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.orig
+*.cache
+*.diff
+*.patch
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+.nuget/
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Environment variables
+.env
+.env.*
+
+
+
+# System-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Visual Studio Code workspace files
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Visual Studio Code Extensions cache
+.vscode-server/
+.vscode-test/
+
+# Visual Studio Installer files
+*.vsconfig
+
+# Visual Studio Temporary Files
+*.pidb
+*.svclog
+*.sdf
+*.pdb
+
+# Visual Studio Code debugging
+.history/
+.vscode-test/
