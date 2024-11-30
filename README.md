@@ -1,14 +1,14 @@
 ## 流程
 1. **確認並修改sql server連線位址**
-2. 確認根目錄位置
-3. 確認Docker Compose版本
-4. 執行Docker Compose Up
-5. 執行 SQL COMMAND
+2. [確認根目錄位置](#根目錄)
+3. [確認Docker Compose版本](#docker-compose-version)
+4. [執行Docker Compose Up](#docker-compose-up)
+5. [執行 SQL COMMAND](#sql-command)
 6. 測試網址: http://localhost:5035/index.html
-7. 移除 Docker Compose
-8. 檢查是否正確移除
+7. [移除 Docker Compose](#移除)
+8. [檢查是否正確移除](#查看是否有正確移除)
 
-## 根目錄
+## [根目錄](#流程)
 ```pwsh
 PS> ls
 Mode                 LastWriteTime         Length Name
@@ -22,18 +22,18 @@ d----        2024/11/30 下午 12:39                ToDoListTest
 -a---        2024/11/30 上午 11:17           1544 ToDoListApp.sln
 ```
 
-## Docker Compose Version
+## [Docker Compose Version](#流程)
 ```pwsh
 PS> wsl docker compose version                        
 Docker Compose version v2.27.1
 ```
 
-## Docker Compose Up
+## [Docker Compose Up](#流程)
 ```pwsh
 PS> wsl docker compose -p todoproject up
 ```
 
-## SQL COMMAND
+## [SQL COMMAND](#流程)
 ```SQL
 CREATE DATABASE app;
 GO
@@ -48,12 +48,12 @@ CREATE TABLE ToDo (
 );
 ```
 
-## 移除
+## [移除](#流程)
 ```pwsh
 PS> wsl docker compose -p todoproject down --rmi all --volumes
 ```
 
-## 查看是否有正確移除
+## [查看是否有正確移除](#流程)
 ```pwsh
 PS> wsl docker ps -a
 PS> wsl docker image 
