@@ -6,14 +6,14 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 # 拷貝項目文件
-COPY ToDoListApp/ToDoListApp.csproj ./ToDoListApp/
-COPY ToDoListTest/ToDoListTest.csproj ./ToDoListTest/
+COPY ["ToDoListApp/ToDoListApp.csproj", "./ToDoListApp/"]
+COPY ["ToDoListTest/ToDoListTest.csproj", "./ToDoListTest/"]
 
 # 還原依賴
 RUN dotnet restore ./ToDoListTest/ToDoListTest.csproj
 
 # 拷貝所有代碼
-COPY . ./
+COPY . .
 
 # 編譯測試項目
 RUN dotnet build ./ToDoListTest/ToDoListTest.csproj -c $BUILD_CONFIGURATION -o /app/build
